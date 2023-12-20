@@ -147,6 +147,14 @@ def main(win, infile_name):
 		win = GraphWin("Hangman", win_width, win_height)
 		win.setCoords(0, 0, win_width, win_height)
 
+	# Welcome message
+		greeting_message = Text(Point(win_width / 2, win_height - 30),
+                            "Welcome to Hangman! Try to guess the word.")
+		greeting_message.setStyle('bold')
+		greeting_message.setTextColor(color_rgb(0, 6, 8))
+		greeting_message.setSize(14)
+		greeting_message.draw(win)
+
 	# Draw the game message area, the ground of the Hangman graphic, and the empty grid
 	win_message = Text(Point(win_width / 2, 70), "Let's play! Guess a letter below to see if it's in the word.")
 	win_message.setStyle('bold')
